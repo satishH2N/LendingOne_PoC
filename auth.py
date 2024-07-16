@@ -6,7 +6,7 @@ def authenticate():
     usernames = ["avesh", "harshada","sangram"]
     passwords = ["123", "456","789"]
 
-    hashed_passwords = stauth.hasher(passwords).generate()
+    hashed_passwords = stauth.utilities.hasher(passwords).generate()
 
     authenticator = stauth.Authenticate(names, usernames, hashed_passwords, "some_cookie_name", "some_signature_key")
 
