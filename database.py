@@ -17,8 +17,8 @@ def insert_finance_metadata(account_type, account_code, date_of_entry, transacti
     cursor = conn.cursor()
     cursor.execute(f"""
         INSERT INTO ODS_STREAMLIT.FINANCE_METADATA (account_type, account_code, date_of_entry, transaction_amount, entered_by)
-        VALUES ('{account_type}', '{account_code}', '{date_of_entry}', {transaction_amount}, '{entered_by}')
-    """)
+        VALUES (%s, %s, %s, %s, %s)
+    """, (account_type, account_code, date_of_entry, transaction_amount, entered_by))
     conn.commit()
     cursor.close()
     conn.close()
