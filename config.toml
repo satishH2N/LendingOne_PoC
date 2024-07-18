@@ -1,0 +1,11 @@
+[snowflake]
+user = "anagauri"
+password = "Beskos3421@"
+account = "dlb82371.us-east-1"
+warehouse = "EDH_QUERY"
+database = "ODS"
+schema = "ODS_STREAMLIT"
+
+[auth]
+username = "admin"
+password = "admin123"
